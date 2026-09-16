@@ -30,23 +30,15 @@ Structures and reviews scientific talks and lab meeting presentations, following
 
 ## Use a skill
 
-Copy the skill folder into a directory your agent reads. Common locations:
+Give your agent this prompt:
 
-| Agent | Personal skills | Project skills |
-|---|---|---|
-| Cursor | `~/.cursor/skills/` | `.cursor/skills/` |
-| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
-
-For example, to install all four skills for Cursor:
-
-```bash
-git clone https://github.com/aadish98/custom-skills.git
-mkdir -p ~/.cursor/skills
-cp -r custom-skills/skills/orwell-writing-rules ~/.cursor/skills/
-cp -r custom-skills/skills/google-style-guide ~/.cursor/skills/
-cp -r custom-skills/skills/scientific-writing-structure ~/.cursor/skills/
-cp -r custom-skills/skills/allada-lab-presentation ~/.cursor/skills/
+```text
+Clone https://github.com/aadish98/custom-skills and install every skill in
+its skills/ folder into wherever you keep skills for yourself, preserving
+each skill's folder structure.
 ```
+
+Cursor, Claude Code, Codex, and any other agent that supports the Agent Skills format know where their own skills directory lives and will put each folder there on their own.
 
 Once installed, name a skill when you want it applied:
 
@@ -55,8 +47,6 @@ Use the orwell-writing-rules skill to tighten the copy on these slides.
 ```
 
 An agent can also load a skill unprompted when your request matches the skill's description. Ask one to draft release notes, and it should load the relevant skill without being told.
-
-Check your agent's documentation for the directories it reads and any install command it provides.
 
 ## Repository structure
 
