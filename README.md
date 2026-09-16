@@ -24,6 +24,10 @@ Google's developer documentation style guide, adapted for scientific communicati
 
 Gopen and Swan's "The Science of Scientific Writing" supplies the structure that readers expect: subjects beside their verbs, old information opening a sentence, and the new, emphasized information at its end.
 
+### [`allada-lab-presentation`](./skills/allada-lab-presentation)
+
+Structures and reviews scientific talks and lab meeting presentations, following the Allada lab's talk guide (adapted from Indira M. Raman): building the introduction, presenting data through rationale, results, and conclusions, and designing slides and language for a scientific audience.
+
 ## Use a skill
 
 Copy the skill folder into a directory your agent reads. Common locations:
@@ -33,7 +37,7 @@ Copy the skill folder into a directory your agent reads. Common locations:
 | Cursor | `~/.cursor/skills/` | `.cursor/skills/` |
 | Claude Code | `~/.claude/skills/` | `.claude/skills/` |
 
-For example, to install all three skills for Cursor:
+For example, to install all four skills for Cursor:
 
 ```bash
 git clone https://github.com/aadish98/custom-skills.git
@@ -41,6 +45,7 @@ mkdir -p ~/.cursor/skills
 cp -r custom-skills/skills/orwell-writing-rules ~/.cursor/skills/
 cp -r custom-skills/skills/google-style-guide ~/.cursor/skills/
 cp -r custom-skills/skills/scientific-writing-structure ~/.cursor/skills/
+cp -r custom-skills/skills/allada-lab-presentation ~/.cursor/skills/
 ```
 
 Once installed, name a skill when you want it applied:
@@ -64,9 +69,14 @@ custom-skills/
 │   ├── google-style-guide/
 │   │   ├── SKILL.md
 │   │   └── reference.md
-│   └── scientific-writing-structure/
+│   ├── scientific-writing-structure/
+│   │   ├── SKILL.md
+│   │   └── reference.md
+│   └── allada-lab-presentation/
 │       ├── SKILL.md
 │       └── reference.md
+├── resources/
+│   └── AlladaTalkGuide23.doc
 ├── LICENSE
 └── README.md
 ```
